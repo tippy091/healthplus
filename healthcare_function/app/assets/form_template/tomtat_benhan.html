@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>BẢN TÓM TẮT HỒ SƠ BỆNH ÁN</title>
+</head>
+<body style="font-family: DejaVu Sans, sans-serif; margin: 40px; font-size: 14px; line-height: 1.6;">
+
+  <!-- Header -->
+  <div style="display: flex; justify-content: space-between;">
+    <div>
+      Cơ quan chủ quản: {{ hospital_group }}<br>
+      Cơ sở KB, CB: {{ hospital_name }}
+    </div>
+    <div style="text-align: right;">
+      MS: 52/BV2
+    </div>
+  </div>
+
+  <h3 style="text-align: center; font-size: 18px; font-weight: bold; margin-top: 20px;">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</h3>
+  <p style="text-align: center; font-style: italic;">Độc lập - Tự do - Hạnh phúc</p>
+  <h2 style="text-align: center; margin: 20px 0;">BẢN TÓM TắT HỒ SƠ BỆNH ÁN</h2>
+
+  <!-- I. HÀNH CHÍNH -->
+  <h3 style="font-weight: bold; text-transform: uppercase;">I. HÀNH CHÍNH</h3>
+
+  <p><strong>Họ và tên (in hoa): {{ patient_name }}</strong> 
+     <strong style="margin-left: 20px;">Ngày sinh: {{ dob }}</strong> 
+     <strong style="margin-left: 20px;">Tuổi: {{ age }}</strong></p>
+
+  <p><strong>Giới tính: {{ gender }}</strong>
+     <strong style="margin-left: 40px;">Dân tộc: {{ nation }}</strong></p>
+
+  <p><strong>Địa chỉ cư trú:</strong> Số nhà {{ address_number }} ,
+     Phường / Xã {{ address_ward }} ,
+     Huyện / Quận {{ address_district }} </p>
+     Tỉnh, TP {{ address_city }} </p>
+
+  <p><strong>Số thẻ BHYT: {{ insurance_id }}</strong> </p>
+
+  <p><strong>Số CCCD/Hộ chiếu/Mã định danh: {{ cccd_id }}</strong></p>
+
+  <p><strong>Vào viện ngày: {{ in_date }}</strong> 
+     <strong style="margin-left: 40px;">Ra viện ngày: {{ out_date }}</strong> </p>
+
+  <!-- II. CHẨN ĐOÁN -->
+  <h3 style="font-weight: bold; text-transform: uppercase;">II. CHẨN ĐOÁN</h3>
+  <p><em>(Tên bệnh và mã ICD đính kèm)</em></p>
+  <p><strong>Chẩn đoán vào viện: {{ diagnoses }}</strong> </p>
+  <p><strong>Chẩn đoán ra viện: {{ diagnoses_out }}</strong> </p>
+
+  <!-- III. TÓM TẮ QUÁ TRÌNH ĐIỀU TRỊ -->
+  <h3 style="font-weight: bold; text-transform: uppercase;">III. TÓM TẮT QUÁ TRÌNH ĐIỀU TRỊ</h3>
+  <p><strong>Lý do vào viện: {{ dianogses }}</strong> </p>
+
+  <p><strong>Tóm tắt quá trình bệnh lý và diễn biến lâm sàng</strong> <em>(Đặc điểm khởi phát, triệu chứng...)</em></p>
+  <p style="border-bottom: 1px solid #000; width: 100%; height: 1em;"></p>
+  <p style="border-bottom: 1px solid #000; width: 100%; height: 1em;"></p>
+  <p style="border-bottom: 1px solid #000; width: 100%; height: 1em;"></p>
+
+  <p><strong>Tiền sử bệnh: {{ medical_hisotry }}</strong></p>
+  <p style="border-bottom: 1px solid #000; width: 100%; height: 1em;"></p>
+
+  <p><strong>Những dấu hiệu lâm sàng chính được ghi nhận</strong> <em>(có giá trị chẩn đoán)</em></p>
+  <p style="border-bottom: 1px solid #000; width: 100%; height: 1em;"></p>
+
+  <p><strong>Kết quả xét nghiệm/cận lâm sàng: {{ diagnoses_result }}</strong></p>
+  <p style="border-bottom: 1px solid #000; width: 100%; height: 1em;"></p>
+
+  <p><strong>Phương pháp điều trị: {{ treatment_methods }}</strong></p>
+    <p>Phẩu thuật, thủ thuật: {{ surgegy_methods }}<label></label></p>
+
+  <p><strong>Tình trạng ra viện:</strong></p>
+  <p>
+    <label><input type="checkbox"> Khỏi </label>
+    <label><input type="checkbox"> Đỡ</label>
+    <label><input type="checkbox"> Không thay đổi</label>
+    <label><input type="checkbox"> Nặng hơn</label>
+    <label><input type="checkbox"> Tử vong</label>
+    <label><input type="checkbox"> Tiên lượng nặng xin về</label>
+    <label><input type="checkbox"> Chưa xác định</label>
+  </p>
+
+  <p><strong>Hướng điều trị tiếp theo:</strong></p>
+  <p style="border-bottom: 1px solid #000; width: 100%; height: 1em;"></p>
+  <p style="border-bottom: 1px solid #000; width: 100%; height: 1em;"></p>
+
+  <p style="text-align: right; margin-top: 40px;">
+    Ngày ....... tháng ....... năm 20.......<br><br>
+    <strong>Đại diện đơn vị</strong><br>
+    <em>{{ doctor_signature }}</em> </br>
+    <em>{{ doctor_fullName }}</em>
+  </p>
+
+</body>
+</html>

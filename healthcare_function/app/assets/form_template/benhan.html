@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: DejaVu Sans, sans-serif;
+      margin: 40px;
+      font-size: 14px;
+    }
+    .header-3col {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .left, .center, .right {
+      width: 32%;
+    }
+    .center {
+      text-align: center;
+    }
+    .right {
+      text-align: right;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .section {
+      margin-top: 20px;
+    }
+    .row {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-3col">
+    <div class="left">
+      <strong>CƠ QUAN CHỦ QUẢN</strong><br>
+      <strong>CƠ SỞ KHÁM BỆNH,</strong><br>
+      <strong>CHỮA BỆNH</strong>
+    </div>
+
+    <div class="center">
+      <div class="title">BỆNH ÁN</div>
+      <div style="margin-top: 10px;">
+        ☐ Nội trú &nbsp;&nbsp; ☐ Ngoại trú &nbsp;&nbsp; ☐ Ban ngày
+      </div>
+    </div>
+
+    <div class="right">
+      Mã người bệnh: {patient_id}<br>
+      Mã YT: {insurance_id}<br>
+      Số vào viện: {hospital_care}<br>
+      Số lưu trữ: {hospital_storage}
+    </div>
+  </div>
+
+  <!-- Tiếp tục phần còn lại -->
+<div style="display: flex; justify-content: center;">
+  <div class="section" style="max-width: 700px; text-align: left;">
+    <div class="row">KHOA: {department}</div>
+    <div class="row">PHÒNG: {hospital_room_id} &nbsp; GIƯỜNG: {room_bed_id}</div>
+    <div class="row">HỌ VÀ TÊN (In hoa): {patient_fullName} ☐ Nam ☐ Nữ</div>
+    <div class="row">Ngày sinh: {dob_date} / {dob_month} / {dob_year} &nbsp;&nbsp;&nbsp; Tuổi: {age}</div>
+    <div class="row">Địa chỉ: {address}.</div>
+    <div class="row">Ngày vào viện: {in_date} / {in_month} / {in_year} &nbsp;&nbsp;&nbsp; Ngày ra viện: {out_date} / {out_month} / {out_year}</div>
+  </div>
+</div>
+
+</body>
+</html>

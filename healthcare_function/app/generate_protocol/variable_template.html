@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Báo cáo {milestone} của bác sĩ</title>
+  <style>
+    body {
+      font-family: "DejaVu Sans", sans-serif;
+      margin: 30px;
+      color: #333;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .info p {
+      margin: 4px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid #999;
+    }
+    th, td {
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #ecf0f1;
+    }
+    .note {
+      font-style: italic;
+      margin-top: 20px;
+    }
+    .section-title {
+      margin-top: 40px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>BÁO CÁO HOẠT ĐỘNG CHUYÊN MÔN {milestone}</h1>
+  <h2>Từ {start_time} đến {end_time}</h2>
+
+  <div class="info">
+    <p><strong>Bác sĩ:</strong> {doctor_name}</p>
+    <p><strong>Mã số bác sĩ:</strong> {doctor_code}</p>
+    <p><strong>Khoa:</strong> {doctor_department}</p>
+    <p><strong>Thời gian làm việc:</strong> {doctor_shift}</p>
+  </div>
+
+  <div class="section-title">I. Tổng quan khám chữa bệnh</div>
+  <table>
+    <tbody>
+      <tr><td>Số lượt khám</td><td>{total_visit}</td></tr>
+      <tr><td>Lượt tái khám</td><td>{follow_visit}</td></tr>
+      <tr><td>Lượt khám ngoại trú</td><td>{outpatient_visit}</td></tr>
+      <tr><td>Lượt điều trị nội trú</td><td>{inpatient_treatment}</td></tr>
+      <tr><td>Thời gian điều trị trung bình</td><td>{average_treatment_duration}</td></tr>
+      <tr><td>Số bệnh nhân tử vong</td><td>{patiens_death}</td></tr>
+      <tr><td>Tỷ lệ hoàn thành bệnh án đúng hạn</td><td>{on_time_discharge_rate}</td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-title">II. Chỉ số lâm sàng trung bình</div>
+  <table>
+    <thead>
+      <tr><th>Chỉ số</th><th>Giá trị trung bình</th><th>Ghi chú</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Huyết áp</td><td>{blood_pressure}</td><td>{blood_pressure_analys}</td></tr>
+      <tr><td>Nhiệt độ</td><td>{temeprature}</td><td>Không sốt cao</td></tr>
+      <tr><td>SpO₂</td><td>{Sp02}</td><td>3 bệnh nhân dưới 90%</td></tr>
+      <tr><td>CRP</td><td>48 mg/L</td><td>Cao ở nhóm viêm phổi</td></tr>
+      <tr><td>Glucose (máu đói)</td><td>7.2 mmol/L</td><td>Tiền đái tháo đường</td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-title">III. Kê đơn & sử dụng thuốc</div>
+  <table>
+    <thead>
+      <tr><th>Thuốc</th><th>Số đơn</th><th>Tỷ lệ sử dụng</th><th>Ghi chú</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>{medicine_name}</td><td>{number_orders}</td><td>{number_orders / total_cases}</td><td>{notes} & {advantages}</td></tr>
+      <tr><td>{medicine_name}</td><td>{number_orders}</td><td>{number_orders / total_cases}</td><td>{notes} & {advantages}</td></tr>
+      <tr><td>{medicine_name}</td><td>{number_orders}</td><td>{number_orders / total_cases}</td><td>{notes} & {advantages}</td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-title">IV. Bệnh phổ biến</div>
+  <table>
+    <thead>
+      <tr><th>Bệnh</th><th>Số ca</th><th>Tỷ lệ (%)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>{diseases}</td><td>{disease_case}</td><td>{disease_case / total_case}</td></tr>
+      <tr><td>{diseases}</td><td>{disease_case}</td><td>{disease_case / total_case}</td></tr>
+      <tr><td>{diseases}</td><td>{disease_case}</td><td>{disease_case / total_case}</td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-title">V. Danh sách bệnh nhân cần theo dõi sát</div>
+  <table>
+    <thead>
+      <tr><th>Mã BN</th><th>Họ tên</th><th>Chẩn đoán</th><th>Lý do cần theo dõi</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>{patient_code}</td><td>{patient_name}</td><td>{patient_disease}</td><td>{patient_crucial_care_note}</td></tr>
+      <tr><td>{patient_code}</td><td>{patient_name}</td><td>{patient_disease}</td><td>{patient_crucial_care_note}</td></tr>
+      <tr><td>{patient_code}</td><td>{patient_name}</td><td>{patient_disease}</td><td>{patient_crucial_care_note}</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <p><strong>Ghi chú tổng kết:</strong> Tuần này có xu hướng gia tăng bệnh hô hấp do thời tiết thất thường. Cần sàng lọc kỹ bệnh nhân có bệnh nền mạn tính, đặc biệt nhóm > 60 tuổi. Không ghi nhận tai biến nghiêm trọng nào.</p>
+  </div>
+
+</body>
+</html>

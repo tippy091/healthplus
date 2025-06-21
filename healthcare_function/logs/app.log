@@ -1,0 +1,12 @@
+2025-06-19 15:10:11,864 - app:50 - INFO - Starting app initialization with env=dev, debug=False
+2025-06-19 15:10:11,864 - app:50 - INFO - Starting app initialization with env=dev, debug=False
+2025-06-19 15:10:11,865 - app:60 - INFO - API Blueprint registered.
+2025-06-19 15:10:11,865 - app:60 - INFO - API Blueprint registered.
+2025-06-19 15:10:11,865 - app:62 - INFO - App initialized successfully: env=dev, debug=False
+2025-06-19 15:10:11,865 - app:62 - INFO - App initialized successfully: env=dev, debug=False
+2025-06-19 15:10:11,873 - werkzeug:97 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.133:8000
+2025-06-19 15:10:11,873 - werkzeug:97 - INFO - [33mPress CTRL+C to quit[0m
+2025-06-19 15:10:21,341 - root:70 - INFO - Flask development server stopped.

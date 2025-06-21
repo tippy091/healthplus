@@ -1,0 +1,7 @@
+services:
+  healthcare_function:
+    build: .
+    ports:
+      - '8000:8000'
+    image: healthcare_function:latest
+    container_name: healthcare_function
